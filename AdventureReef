@@ -1,0 +1,149 @@
+<html>
+<nav>
+  <li class="nav"><a href="about.asp">Rides and Pools</a></li>
+  <li class="nav"><a href="about.asp">Background Info</a></li>
+    <li class="nav"><a href="about.asp">Home</a></li>
+  </nav>
+<center>
+<h1> Adventure Reef Aqua Park</h1>
+<div class="row">
+  <div class="column">
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img id="pic" src="https://www.holidify.com/images/cmsuploads/compressed/Hero-Image-Desktop-1500x900-park-Image_20180607222930.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img id="pics" src="https://res.cloudinary.com/thrillophilia/image/upload/c_fill,f_auto,fl_progressive.strip_profile,g_auto,q_auto/v1/filestore/ccyg95h47naqcfjxmyuli9g2z375_shutterstock_1617135085.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img id="pict" src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/b0/e8/9b.jpg" style="width:100%">
+  </div>
+
+  <!-- Next and previous buttons -->
+
+</div>
+<br>
+    <!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+ <button type="button" name="button" onclick="alert('TEXT SHOWN: You just bought your tickets! See you soon!')"> Click Here to Buy Tickets</button>  
+<img src="https://raw.githubusercontent.com/WVCS/index-CelineCiotta/main/adventure%20reef%20(1).png">
+</httml>
+<style>
+body{
+  background-color: #DEF5FF
+}
+nav{
+  list-stlyle:none;
+  position:fixed;
+  background-color:#55F7ED;
+    width:100%;
+  left:0%;
+  top:0%;
+}
+.nav{
+  display:inline;
+  float:right;
+  padding:3vh;
+}
+.nav:hover{
+  background-color:#71CDD8;
+}
+h1{
+  font-size: 16vh;
+}
+
+img{
+  height: 50vh;
+}
+{box-sizing:border-box}
+.slideshow-container {
+  max-width: 600px;
+  position: relative;
+  margin: auto;
+}
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+.closebtn{
+  float: right;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+</style>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
